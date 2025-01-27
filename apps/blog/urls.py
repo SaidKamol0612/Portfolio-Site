@@ -2,10 +2,11 @@ from django.conf.urls.static import static
 from django.urls import path
 from config import settings
 
-from .views import blog_view
+from .views import blog_view, single_view
 
 urlpatterns = [
     path('', blog_view, name='blog'),
+    path('single/', single_view, name='single'),
 ]
 
 if settings.DEBUG:
